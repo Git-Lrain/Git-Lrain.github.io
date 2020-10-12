@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.drizzle.store/2020/10/12/Deepin%E5%AE%89%E8%A3%85Metasploit/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.drizzle.store/2020/10/12/Google%E8%AF%AD%E6%B3%95/</loc>
     
     <lastmod>2020-10-12</lastmod>
@@ -38,10 +45,31 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>http://blog.drizzle.store/tags/Deepin/</loc>
+    <lastmod>2020-10-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.drizzle.store/tags/%E5%AE%89%E5%85%A8%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2020-10-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
     <loc>http://blog.drizzle.store/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2020-10-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.drizzle.store/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2020-10-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
