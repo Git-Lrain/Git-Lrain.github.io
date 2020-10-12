@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/10/06/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Google语法</title>
+    <url>/2020/10/12/Google%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="Google-语法"><a href="#Google-语法" class="headerlink" title="Google 语法"></a>Google 语法</h1><p>Google搜索引擎是在平时以及渗透一个常用的搜索引擎，熟练的使用google语法，在信息收集中可以排除其他无关内容，得到更加准确的信息。</p>
+<a id="more"></a>
+
+<h3 id="一、更加精准的搜索内容："><a href="#一、更加精准的搜索内容：" class="headerlink" title="一、更加精准的搜索内容："></a>一、更加精准的搜索内容：</h3><pre><code>    1、过滤搜索结果
+    2、敏感信息
+    3、网页快照
+    4、指定格式的文件
+    5、搜索已有的攻击结果
+    6、具备特殊URL关键字的目标地址
+    7、其它与站点相关的信息</code></pre>
+<h3 id="二、Google语法："><a href="#二、Google语法：" class="headerlink" title="二、Google语法："></a>二、Google语法：</h3><pre><code>    1、-XX 去掉包含XX的搜索结果
+    2、&quot;XX&quot; 完全匹配XY，不可分割
+    3、XX|XY 包含XX或XY的结果
+    4、80..150 数字80到150之间的数字，等同于[80:150]
+
+    5、site:XX 在指定站点XX中搜索
+    6、allintext:XX 搜索正文内容包含XX的网页
+    7、allintitle:XX 搜索标题包含XX的网页
+    8、allurl:XX 搜索包含指定字符XX的url
+    9、cache: 搜索搜索引擎中的缓存
+    10、filetype: 搜索文件类型
+    11、link:XX 查询显示指向XX页面的页面</code></pre>
+<h3 id="三、典型用法"><a href="#三、典型用法" class="headerlink" title="三、典型用法"></a>三、典型用法</h3><h4 id="（一）、找管理后台地址"><a href="#（一）、找管理后台地址" class="headerlink" title="（一）、找管理后台地址"></a>（一）、找管理后台地址</h4><pre><code>    site:xxx.com intext:管理|后台|登录|用户名|密码|系统|账号
+    site:xxx.com inurl:login/admin/manager/admin_login/system
+    site:xxx.com intitle:管理|后台|登录</code></pre>
+<h4 id="（二）、找上传类漏洞地址"><a href="#（二）、找上传类漏洞地址" class="headerlink" title="（二）、找上传类漏洞地址"></a>（二）、找上传类漏洞地址</h4><pre><code>    site:xxx.com inurl:file
+    site:xxx.com inurl:upload</code></pre>
+<h4 id="（三）、找注入页面"><a href="#（三）、找注入页面" class="headerlink" title="（三）、找注入页面"></a>（三）、找注入页面</h4><pre><code>    site:xxx.com inurl:php?id=</code></pre>
+<h4 id="（四）、找编辑页面"><a href="#（四）、找编辑页面" class="headerlink" title="（四）、找编辑页面"></a>（四）、找编辑页面</h4><pre><code>    site:xxx.com inurl:ewebeditor</code></pre>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><pre><code>    在搜索语法中“:”和搜索词中间不应当有空格
+    allintitle和intitle相差不大：
+        例如[intitle：google intitle：search]与[allintitle：google search]相同</code></pre>
+<p>参考：<a href="http://www.googleguide.com/advanced_operators_reference.html">http://www.googleguide.com/advanced_operators_reference.html</a></p>
+]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>信息收集</tag>
+      </tags>
+  </entry>
+</search>
