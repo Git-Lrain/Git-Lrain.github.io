@@ -64,4 +64,85 @@
         <tag>安全工具</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Ip查询</title>
+    <url>/2020/10/13/Ip%E6%9F%A5%E8%AF%A2/</url>
+    <content><![CDATA[<h1 id="IP查询"><a href="#IP查询" class="headerlink" title="IP查询"></a>IP查询</h1><h2 id="通过域名查找IP"><a href="#通过域名查找IP" class="headerlink" title="通过域名查找IP"></a>通过域名查找IP</h2><p>使用ping命令检测域名对应的IP地址<br>有些网站采用了CDN技术，使用ping命令无法得到真实的IP，此时可以使用以下方法：</p>
+<a id="more"></a>
+
+<h3 id="验证是否存在CDN"><a href="#验证是否存在CDN" class="headerlink" title="验证是否存在CDN"></a>验证是否存在CDN</h3><p><strong>方法一</strong>：在站长之家等，使用多地ping的服务，查看对应IP是否唯一。如果不唯一，则可能采用了CDN</p>
+<p><img src="https://gitee.com/Git-Lrain/image-bed/raw/master/img/20201013171555.png" alt="image-20200927161527975"></p>
+<p><strong>方法二</strong>：使用nslookup检测，若是返回了多个IP地址，则可能采用了CDN<br><img src="https://gitee.com/Git-Lrain/image-bed/raw/master/img/20201013171555.png" alt="image-20200927160845021"></p>
+<h3 id="绕过CDN查找网站真实IP"><a href="#绕过CDN查找网站真实IP" class="headerlink" title="绕过CDN查找网站真实IP"></a>绕过CDN查找网站真实IP</h3><h4 id="方法一：查询历史DNS记录"><a href="#方法一：查询历史DNS记录" class="headerlink" title="方法一：查询历史DNS记录"></a>方法一：查询历史DNS记录</h4><p><strong>查看 IP 与 域名绑定的历史记录，可能会存在使用 CDN 前的记录，相关查询网站有：</strong><br><a href="https://dnsdb.io/zh-cn/">https://dnsdb.io/zh-cn/</a> DNS查询<br><a href="https://x.threatbook.cn/">https://x.threatbook.cn/</a> 微步在线<br><a href="http://toolbar.netcraft.com/site_report?url=">http://toolbar.netcraft.com/site_report?url=</a> 在线域名信息查询<br><a href="http://viewdns.info/">http://viewdns.info/</a> DNS、IP等查询<br><a href="https://tools.ipip.net/cdn.php">https://tools.ipip.net/cdn.php</a> CDN查询IP</p>
+<h4 id="方法二：查询子域名"><a href="#方法二：查询子域名" class="headerlink" title="方法二：查询子域名"></a>方法二：查询子域名</h4><p>毕竟 CDN 还是不便宜的，所以很多站长可能只会对主站或者流量大的子站点做了 CDN，而很多小站子站点又跟主站在同一台服务器或者同一个C段内，此时就可以通过查询子域名对应的 IP 来辅助查找网站的真实IP。</p>
+<h4 id="方法三：网络空间引擎搜索法"><a href="#方法三：网络空间引擎搜索法" class="headerlink" title="方法三：网络空间引擎搜索法"></a>方法三：网络空间引擎搜索法</h4><p>常见的有以前的钟馗之眼，shodan，fofa搜索。以fofa为例，只需输入：title:“网站的title关键字”或者body：“网站的body特征”就可以找出fofa收录的有这些关键字的ip域名，很多时候能获取网站的真实ip。</p>
+<h4 id="方法四：利用SSL证书寻找真实原始IP"><a href="#方法四：利用SSL证书寻找真实原始IP" class="headerlink" title="方法四：利用SSL证书寻找真实原始IP"></a>方法四：利用SSL证书寻找真实原始IP</h4><h4 id="方法五：利用HTTP标头寻找真实原始IP"><a href="#方法五：利用HTTP标头寻找真实原始IP" class="headerlink" title="方法五：利用HTTP标头寻找真实原始IP"></a>方法五：利用HTTP标头寻找真实原始IP</h4><h4 id="方法六：利用网站返回的内容寻找真实原始IP"><a href="#方法六：利用网站返回的内容寻找真实原始IP" class="headerlink" title="方法六：利用网站返回的内容寻找真实原始IP"></a>方法六：利用网站返回的内容寻找真实原始IP</h4><h4 id="方法七：使用国外主机解析域名"><a href="#方法七：使用国外主机解析域名" class="headerlink" title="方法七：使用国外主机解析域名"></a>方法七：使用国外主机解析域名</h4><p>国内很多 CDN 厂商因为各种原因只做了国内的线路，而针对国外的线路可能几乎没有，此时我们使用国外的主机直接访问可能就能获取到真实IP。</p>
+<h4 id="方法八：网站漏洞查找"><a href="#方法八：网站漏洞查找" class="headerlink" title="方法八：网站漏洞查找"></a>方法八：网站漏洞查找</h4><p>1、目标敏感文件泄露，例如：phpinfo之类的探针、GitHub信息泄露等。<br>2、XSS盲打，命令执行反弹shell，SSRF等。<br>3、无论是用社工还是其他手段，拿到了目标网站管理员在CDN的账号，从而在从CDN的配置中找到网站的真实IP。</p>
+<h4 id="方法九：网站邮件订阅查找"><a href="#方法九：网站邮件订阅查找" class="headerlink" title="方法九：网站邮件订阅查找"></a>方法九：网站邮件订阅查找</h4><p>RSS邮件订阅，很多网站都自带 sendmail，会发邮件给我们，此时查看邮件源码里面就会包含服务器的真实IP了。</p>
+<h4 id="方法十：用-Zmap-扫全网"><a href="#方法十：用-Zmap-扫全网" class="headerlink" title="方法十：用 Zmap 扫全网"></a>方法十：用 Zmap 扫全网</h4><p>需要找 xiaix.me网站的真实 IP，我们首先从 apnic 获取 IP 段，然后使用 Zmap 的 banner-grab扫描出来 80 端口开放的主机进行 banner 抓取，最后在 http-req 中的 Host 写 xiaix.me。</p>
+<h4 id="方法十一：F5-LTM解码法"><a href="#方法十一：F5-LTM解码法" class="headerlink" title="方法十一：F5 LTM解码法"></a>方法十一：F5 LTM解码法</h4><p>当服务器使用F5 LTM做负载均衡时，通过对set-cookie关键字的解码真实ip也可被获取，例如：Set-Cookie: BIGipServerpool_8.29_8030=487098378.24095.0000，先把第一小节的十进制数即487098378取出来，然后将其转为十六进制数1d08880a，接着从后至前，以此取四位数出来，也就是0a.88.08.1d，最后依次把他们转为十进制数10.136.8.29，也就是最后的真实ip。</p>
+<p>本文参考自：<a href="https://www.cnblogs.com/qiudabai/p/9763739.html">https://www.cnblogs.com/qiudabai/p/9763739.html</a> ，若有异议，请以原文为准。</p>
+]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>信息收集</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>conda命令的使用</title>
+    <url>/2020/10/21/conda%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>Anaconda是一个非常好的Python发行版本，使用conda管理Python环境是非常的方便的。</p>
+<p>这里是一些conda的常用命令，会持续更新。</p>
+<a id="more"></a>
+
+<h2 id="环境相关"><a href="#环境相关" class="headerlink" title="环境相关"></a>环境相关</h2><blockquote>
+<p>列出所有环境</p>
+</blockquote>
+<p><code>conda info --envs</code></p>
+<blockquote>
+<p>创建一个新环境</p>
+</blockquote>
+<p>其中“-n”指的是新环境的名字</p>
+<p><code>conda create -n newenv python=3</code></p>
+<blockquote>
+<p>激活新环境</p>
+</blockquote>
+<p><code>source activate newenv</code></p>
+<blockquote>
+<p>列出环境内的包</p>
+</blockquote>
+<p><code>conda list</code></p>
+<blockquote>
+<p>移除安装的包，需要告知所在环境</p>
+</blockquote>
+<p><code>conda remove -n newenv beautifulsoup4</code></p>
+<blockquote>
+<p>移除一个环境</p>
+</blockquote>
+<p><code>conda remove -n newenv --all</code></p>
+<h2 id="配置相关"><a href="#配置相关" class="headerlink" title="配置相关"></a>配置相关</h2><blockquote>
+<p>查看conda 的配置</p>
+</blockquote>
+<p><code>conda config --show</code></p>
+<blockquote>
+<p>删源(换回conda的默认源)</p>
+</blockquote>
+<p><code>conda config --remove-key channels</code></p>
+<blockquote>
+<p>换源</p>
+</blockquote>
+<p>1.conda config的方式</p>
+<p><code>conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</code></p>
+<p><code>conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</code></p>
+<p><code>conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</code></p>
+<p><code>conda config --set show_channel_urls: yes</code></p>
+<p>2.直接修改.condarc文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">channels:</span><br><span class="line"></span><br><span class="line"> - https:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;main&#x2F;</span><br><span class="line"></span><br><span class="line"> - https:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;free&#x2F;</span><br><span class="line"></span><br><span class="line"> - https:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;anaconda&#x2F;cloud&#x2F;conda-forge&#x2F;</span><br><span class="line"></span><br><span class="line">show_channel_urls: true</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
 </search>

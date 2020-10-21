@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.drizzle.store/2020/10/21/conda%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2020-10-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.drizzle.store/2020/10/13/Ip%E6%9F%A5%E8%AF%A2/</loc>
+    
+    <lastmod>2020-10-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.drizzle.store/2020/10/12/Deepin%E5%AE%89%E8%A3%85Metasploit/</loc>
     
     <lastmod>2020-10-12</lastmod>
@@ -32,7 +46,7 @@
 
   <url>
     <loc>http://blog.drizzle.store/</loc>
-    <lastmod>2020-10-12</lastmod>
+    <lastmod>2020-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -40,21 +54,28 @@
   
   <url>
     <loc>http://blog.drizzle.store/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</loc>
-    <lastmod>2020-10-12</lastmod>
+    <lastmod>2020-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.drizzle.store/tags/Deepin/</loc>
-    <lastmod>2020-10-12</lastmod>
+    <lastmod>2020-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.drizzle.store/tags/%E5%AE%89%E5%85%A8%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2020-10-12</lastmod>
+    <lastmod>2020-10-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.drizzle.store/tags/Python/</loc>
+    <lastmod>2020-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -63,14 +84,14 @@
   
   <url>
     <loc>http://blog.drizzle.store/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2020-10-12</lastmod>
+    <lastmod>2020-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.drizzle.store/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2020-10-12</lastmod>
+    <lastmod>2020-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
